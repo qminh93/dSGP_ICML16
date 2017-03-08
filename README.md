@@ -1,1 +1,1 @@
-# ICML2017
+# dSGP: Distributed Sparse Gaussian Process (ICML'16)
