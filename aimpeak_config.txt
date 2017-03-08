@@ -1,0 +1,27 @@
+/* TRAINING DATA */
+// [Data path] [Max No. Data points | 0: Everything]
+./aimpeak.csv 41800
+/* RUNNING SETTINGS */
+// [No. Threads] [No. Iterations]
+// [To learn | 0: length-scales (LS), 1: LS + noise, 2: All, 3: Sweep]
+// [BCM | 0: disabled, 1: enabled]
+4 10 2 0
+/* INITIALISATION */
+// { line 1: [No. LS] [Noise] [Signal] }  or { line 1: [-1] [Path to hyp file] }
+// { line 2: [LS1] .. [LSd] } (Absent if No. LS < 0)
+6 2.0 2.0
+1.0 1.0 1.0 1.0 1.0 1.0
+/* LEARNING RATE */
+// [Initial rate / If To-learn = 3, rate_length_scales]
+// [Rate parameters, tau] [Rate parameters, lambda] [Decay]
+// [rate_noise] [rate_signal]
+1.6 1.9 0.0 0.85 1.6 1.6
+/* RUN LIST */
+// { line 1: [No. experiments, nE] }
+// { line 2->nE+1: [Markov order] [Predict mode | 0: DTC, 1: PIC, 2: PITC] [No. Blocks] [No. Support (sp)] [No. sp p. block] [% test] [Seed] [Result file]
+5
+1 1 100 200 418 0.05 4111987 ./B1_aimpeak_result_S200_R1.res
+1 1 100 200 418 0.05 20051987 ./B1_aimpeak_result_S200_R2.res
+1 1 100 200 418 0.05 26031993 ./B1_aimpeak_result_S200_R3.res
+1 1 100 200 418 0.05 8071950 ./B1_aimpeak_result_S200_R4.res
+1 1 100 200 418 0.05 10081950 ./B1_aimpeak_result_S200_R5.res
